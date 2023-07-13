@@ -3,7 +3,18 @@ import BookList from '../components/BookList';
 import AddBook from '../components/AddBook';
 
 const Book = () => {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState([
+    {
+      id: 1,
+      title: 'The Catcher in the Rye',
+      author: 'J.D. Salinger',
+    },
+    {
+      id: 2,
+      title: '1984',
+      author: 'George Orwell',
+    },
+  ]);
 
   const addBook = (book) => {
     setBooks([...books, { ...book, id: books.length + 1 }]);
