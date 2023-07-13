@@ -9,10 +9,14 @@ const Book = () => {
     setBooks([...books, { ...book, id: books.length + 1 }]);
   };
 
+  const deleteBook = (id) => {
+    setBooks(books.filter((book) => book.id !== id));
+  };
+
   return (
     <div>
       <h1>Book Page</h1>
-      <BookList books={books} />
+      <BookList books={books} deleteBook={deleteBook} />
       <AddBook addBook={addBook} />
     </div>
   );

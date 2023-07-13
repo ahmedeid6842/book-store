@@ -1,12 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import BookItem from './BookItem';
 
-const BookList = ({ books }) => (
+const BookList = ({ books, deleteBook }) => (
   <div>
     <h2>Book List</h2>
     {books.map((book) => (
-      <BookItem key={book.id} book={book} />
+      <BookItem key={book.id} book={book} deleteBook={deleteBook} />
     ))}
   </div>
 );
@@ -14,10 +13,12 @@ const BookList = ({ books }) => (
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
   ).isRequired,
+  deleteBook: PropTypes.func.isRequired,
 };
 
 export default BookList;
