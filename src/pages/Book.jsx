@@ -1,34 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook, removeBook } from '../redux/books/booksSlice';
 import BookList from '../components/BookList';
 import AddBook from '../components/AddBook';
 
 const Book = () => {
-  const [books, setBooks] = useState([
-    {
-      id: 1,
-      title: 'The Catcher in the Rye',
-      author: 'J.D. Salinger',
-    },
-    {
-      id: 2,
-      title: '1984',
-      author: 'George Orwell',
-    },
-  ]);
+  const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
 
-  const addBook = (book) => {
-    setBooks([...books, { ...book, id: books.length + 1 }]);
+  const handleAddBook = (book) => {
+    const newBook = { ...book, id: uuidv4() };
+    dispatch(addBook(newBook));
   };
 
-  const deleteBook = (id) => {
-    setBooks(books.filter((book) => book.id !== id));
+  const handleDeleteBook = (id) => {
+    dispatch(removeBook(id));
   };
 
   return (
     <div>
       <h1>Book Page</h1>
-      <BookList books={books} deleteBook={deleteBook} />
-      <AddBook addBook={addBook} />
+      <BookList books={books} deleteBook={handleDeleteBook} />
+      <AddBook addBook={handleAddBook} />
     </div>
   );
 };
