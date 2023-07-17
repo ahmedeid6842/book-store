@@ -14,7 +14,7 @@ const Categories = () => {
     <div>
       <h2>
         Categories:
-        {categories[0]}
+        {categories}
       </h2>
       <button type="button" onClick={handleClick}>Check Status</button>
     </div>
