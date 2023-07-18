@@ -7,13 +7,13 @@ const BookItem = ({ book, deleteBook }) => (
       By
       {book.author}
     </p>
-    <button type="button" onClick={() => deleteBook(book.id)}>Delete</button>
+    <button type="button" onClick={() => deleteBook(book.item_id)}>Delete</button>
   </div>
 );
 
 BookItem.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    item_id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,
