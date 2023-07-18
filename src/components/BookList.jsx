@@ -5,7 +5,7 @@ const BookList = ({ books, deleteBook }) => (
   <div>
     <h2>Book List</h2>
     {books.map((book) => (
-      <BookItem key={book.id} book={book} deleteBook={deleteBook} />
+      <BookItem key={book.item_id} book={book} deleteBook={deleteBook} />
     ))}
   </div>
 );
@@ -13,7 +13,7 @@ const BookList = ({ books, deleteBook }) => (
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      item_id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
     }).isRequired,

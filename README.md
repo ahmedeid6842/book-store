@@ -31,6 +31,7 @@
 ## 🛠 Built With <a name="built-with">
 ### Tech Stack <a name="tech-stack"></a>
 - React
+- Redux
 - HTML
 - CSS
 - JavaScript
@@ -44,6 +45,7 @@
 
 - **Good HTML, CSS and JS practices**
 - **Using React to build SPA**
+- **Using Redux for state management**
 
 
 

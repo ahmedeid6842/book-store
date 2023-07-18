@@ -10,7 +10,7 @@ const Book = () => {
   const dispatch = useDispatch();
 
   const handleAddBook = (book) => {
-    const newBook = { ...book, id: uuidv4() };
+    const newBook = { ...book, item_id: uuidv4() };
     dispatch(addBook(newBook));
   };
 
