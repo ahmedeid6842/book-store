@@ -46,6 +46,7 @@
 - **Good HTML, CSS and JS practices**
 - **Using React to build SPA**
 - **Using Redux for state management**
+- **Used createAsyncThunk to fetch APIs**
 
 
 
