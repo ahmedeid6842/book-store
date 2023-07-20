@@ -1,13 +1,16 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook, removeBook } from '../redux/books/booksSlice';
+import { fetchBooks, addBook, removeBook } from '../redux/books/booksSlice';
 import BookList from '../components/BookList';
 import AddBook from '../components/AddBook';
 
 const Book = () => {
-  const books = useSelector((state) => state.books.books);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
 
   const handleAddBook = (book) => {
     const newBook = { ...book, item_id: uuidv4() };
@@ -17,6 +20,8 @@ const Book = () => {
   const handleDeleteBook = (id) => {
     dispatch(removeBook(id));
   };
+
+  const books = useSelector((state) => state.books.books);
 
   return (
     <div>

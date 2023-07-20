@@ -4,6 +4,7 @@ import BookItem from './BookItem';
 const BookList = ({ books, deleteBook }) => (
   <div>
     <h2>Book List</h2>
+    {console.log(books)}
     {books.map((book) => (
       <BookItem key={book.item_id} book={book} deleteBook={deleteBook} />
     ))}
@@ -13,7 +14,7 @@ const BookList = ({ books, deleteBook }) => (
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
-      item_id: PropTypes.number.isRequired,
+      item_id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
     }).isRequired,
