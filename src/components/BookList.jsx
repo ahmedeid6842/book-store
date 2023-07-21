@@ -3,10 +3,11 @@ import BookItem from './BookItem';
 
 const BookList = ({ books, deleteBook }) => (
   <div>
-    <h2>Book List</h2>
-    {books.map((book) => (
-      <BookItem key={book.item_id} book={book} deleteBook={deleteBook} />
-    ))}
+    <ul>
+      {books.map((book) => (
+        <BookItem key={book.item_id} book={book} deleteBook={deleteBook} />
+      ))}
+    </ul>
   </div>
 );
 

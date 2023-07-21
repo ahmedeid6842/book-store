@@ -1,27 +1,48 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+* {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+:root {
+  --bg-clr: #fafafa;
+  --white-clr: #fff;
+  --gray-clr: #8e8e8e;
+  --secondary-clr: #4386bf;
+  --primary-clr: #0290ff;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  background-color: var(--bg-clr);
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background-color: var(--white-clr);
+}
+
+ul li {
+  list-style-type: none;
+  background-color: var(--white-clr);
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+h1 {
+  color: var(--primary-clr);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-right: 0.8rem;
 }
