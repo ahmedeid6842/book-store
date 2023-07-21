@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import userprofile from '../images/user-profile-svgrepo-com.svg';
 
 const Header = () => (
   <header className="container-fluid">
@@ -21,6 +22,15 @@ const Header = () => (
             </li>
           </ul>
         </div>
+
+        <div className="navbar-collapse justify-content-end">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <img src={userprofile} alt="User Profile" className="nav-link" />
+            </li>
+          </ul>
+        </div>
+
       </div>
     </nav>
   </header>
