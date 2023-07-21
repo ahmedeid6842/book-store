@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import '../styles/AddBook.css';
 
 const AddBook = ({ addBook }) => {
   const [title, setTitle] = useState('');
@@ -13,13 +14,14 @@ const AddBook = ({ addBook }) => {
   };
 
   return (
-    <div>
-      <h2>Add Book</h2>
+    <section className="form-section">
+      <h2 className="form-title">Add New Book</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           id="title"
-          placeholder="Enter book title"
+          placeholder="Book title"
+          className="book-title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
@@ -27,14 +29,17 @@ const AddBook = ({ addBook }) => {
         <input
           type="text"
           id="author"
-          placeholder="Enter book author"
+          placeholder="Book author"
+          className="book-author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
 
-        <button type="submit">Add</button>
+        <button type="submit" className="add-btn">
+          Add Book
+        </button>
       </form>
-    </div>
+    </section>
   );
 };
 
