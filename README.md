@@ -47,6 +47,7 @@
 - **Using React to build SPA**
 - **Using Redux for state management**
 - **Used createAsyncThunk to fetch APIs**
+- **used Boostrap**
 
 
 
