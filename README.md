@@ -111,6 +111,7 @@ To run this project and open the Math Magicians run the following command :
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Enhance the style of the components**
+- [ ] **connect it with database**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
